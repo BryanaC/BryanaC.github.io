@@ -9,7 +9,7 @@
 
       alert(userAgent);
 
-      if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream || /Macintosh/.test(userAgent) && 'ontouchend') {
+      if ((/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) || (/Macintosh/.test(userAgent) && 'ontouchend')) {
         window.location.href = "https://apps.apple.com/app/id1491355970";
       } else if (/android/i.test(userAgent)) {
         window.location.href =
