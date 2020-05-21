@@ -5,7 +5,7 @@
   </head>
   <body>
     <script>
-      function redirect() {
+      console.log(navigator.userAgent.toLowerCase())
         if (navigator.userAgent.toLowerCase().indexOf("iphone") > -1) {
           window.location.href = "https://apps.apple.com/app/id1491355970";
         } else if (navigator.userAgent.toLowerCase().indexOf("android") > -1) {
@@ -14,7 +14,6 @@
         } else {
           window.location.href = "https://go.spartannash.com"; //Desktop Browser
         }
-      }
     </script>
   </body>
 </html>
