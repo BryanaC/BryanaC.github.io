@@ -1,19 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>PHP Test</title>
+    <title>SpartanNash Go</title>
   </head>
   <body>
     <script>
-      console.log(navigator.userAgent.toLowerCase())
-        if (navigator.userAgent.toLowerCase().indexOf("iphone") > -1) {
-          window.location.href = "https://apps.apple.com/app/id1491355970";
-        } else if (navigator.userAgent.toLowerCase().indexOf("android") > -1) {
-          window.location.href =
-            "http://play.google.com/store/apps/details?id=com.spartannash.go";
-        } else {
-          window.location.href = "https://go.spartannash.com"; //Desktop Browser
-        }
+      var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+      if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+        window.location.href = "https://apps.apple.com/app/id1491355970";
+      } else if (/android/i.test(userAgent)) {
+        window.location.href =
+          "http://play.google.com/store/apps/details?id=com.spartannash.go";
+      } else {
+        window.location.href = "https://go.spartannash.com";
+      }
     </script>
   </body>
 </html>
