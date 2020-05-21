@@ -10,7 +10,7 @@
       alert('version 1: ', userAgent);
 
       if ((/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) || (/Macintosh/.test(userAgent) && 'ontouchend' in document)) {
-        window.location.href = "https://apps.apple.com/app/id1491355970";
+        window.location.href = "itms-apps://itunes.apple.com/app/id1491355970";
       } else if (/android/i.test(userAgent)) {
         window.location.href =
           "http://play.google.com/store/apps/details?id=com.spartannash.go";
