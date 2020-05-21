@@ -1,9 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
- <head>
-  <title>PHP Test</title>
- </head>
- <body>
      <?php
 
 $iPod = stripos($_SERVER['HTTP_USER_AGENT'],"iPod");
@@ -20,5 +14,3 @@ if( $iPod || $iPhone || $iPad ){
 }
 
 ?> 
- </body>
-</html>
