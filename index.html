@@ -7,8 +7,6 @@
     <script>
       var userAgent = navigator.userAgent || navigator.vendor || window.opera;
 
-      alert('version 2: ', userAgent);
-
       if ((/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) || (/Macintosh/.test(userAgent) && 'ontouchend' in document)) {
         window.location.href = "itms-apps://itunes.apple.com/app/id1491355970";
       } else if (/android/i.test(userAgent)) {
