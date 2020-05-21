@@ -7,6 +7,8 @@
     <script>
       var userAgent = navigator.userAgent || navigator.vendor || window.opera;
 
+      alert(userAgent);
+
       if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
         window.location.href = "https://apps.apple.com/app/id1491355970";
       } else if (/android/i.test(userAgent)) {
