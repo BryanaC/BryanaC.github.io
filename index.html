@@ -1,19 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>SpartanNash Go</title>
+    <title>SpartanNash QR Portal</title>
   </head>
   <body>
     <script>
       var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+      var ios = urlParams.get('ios');
+      var android = urlParams.get('android');
+      var fallback = urlParams.get('fallback');
 
       if ((/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) || (/Macintosh/.test(userAgent) && 'ontouchend' in document)) {
-        window.location.href = "itms-apps://itunes.apple.com/app/id1491355970";
+        // window.location.href = "itms-apps://itunes.apple.com/app/id1491355970";
+        window.location.href = ios;
       } else if (/android/i.test(userAgent)) {
-        window.location.href =
-          "http://play.google.com/store/apps/details?id=com.spartannash.go";
+        // window.location.href =
+        //   "http://play.google.com/store/apps/details?id=com.spartannash.go";
+          window.location.href = android;
       } else {
-        window.location.href = "https://go.spartannash.com";
+        // window.location.href = "https://go.spartannash.com";
+        window.location.href = fallback;
       }
     </script>
   </body>
