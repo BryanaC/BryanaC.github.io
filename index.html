@@ -10,6 +10,8 @@
       var android = urlParams.get('android');
       var fallback = urlParams.get('fallback');
 
+      console.log(ios, android, fallback);
+
       if ((/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) || (/Macintosh/.test(userAgent) && 'ontouchend' in document)) {
         // window.location.href = "itms-apps://itunes.apple.com/app/id1491355970";
         window.location.href = ios;
