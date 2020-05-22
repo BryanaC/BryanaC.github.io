@@ -17,14 +17,14 @@
 
       if ((/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) || (/Macintosh/.test(userAgent) && 'ontouchend' in document)) {
         // window.location.href = "itms-apps://itunes.apple.com/app/id1491355970";
-        window.location.href = ios;
+        window.location = ios;
       } else if (/android/i.test(userAgent)) {
         // window.location.href =
         //   "http://play.google.com/store/apps/details?id=com.spartannash.go";
-          window.location.href = android;
+          window.location = android;
       } else {
         // window.location.href = "https://go.spartannash.com";
-        window.location.href = fallback;
+        window.location = fallback;
       }
     </script>
   </body>
