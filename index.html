@@ -6,6 +6,9 @@
   <body>
     <script>
       var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+      const urlParams = new URLSearchParams(queryString);
+
       var ios = urlParams.get('ios');
       var android = urlParams.get('android');
       var fallback = urlParams.get('fallback');
